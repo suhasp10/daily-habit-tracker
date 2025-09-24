@@ -51,4 +51,7 @@ You need to have [Node.js](https://nodejs.org/) installed on your machine.
     node server.js
     ```
 
-5.  **Open your browser** and go to `http://localhost:3000` to use the application.
+5.  **Run the application and create an account:**
+    1.  First, open your browser and navigate to the registration page to create a new user: `http://localhost:3000/register.html`
+    2.  After you click "Register," you will be automatically redirected to the login page.
+    3.  Enter the username and password you just created to log in and start using the app.
