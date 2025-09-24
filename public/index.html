@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Habit Tracker</h1>
+            <div class="date-nav">
+                <button id="prev-day-btn" class="date-nav-btn">&lt;</button>
+                <p id="current-date">Loading date...</p>
+                <button id="next-day-btn" class="date-nav-btn">&gt;</button>
+            </div>
+            <div id="user-info" class="header-user-info">
+                <span id="welcome-user"></span>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-link active" data-tab="home">Home</button>
+            <button class="tab-link" data-tab="dashboard">Dashboard</button>
+            <button class="tab-link" data-tab="my-habits">My Habits</button>
+            <button class="tab-link" data-tab="calendar">Progress Calendar</button>
+        </nav>
+
+        <main>
+            <div id="home" class="tab-content active">
+                <h2 id="home-greeting"></h2>
+                <div class="streak-card">
+                    <h3>Current Streak</h3>
+                    <p id="home-stats-streak">0</p>
+                    <span>days in a row</span>
+                </div>
+                <div class="activity-chart-container">
+                    <h3>Last 7 Days Activity</h3>
+                    <div id="activity-chart" class="activity-chart">
+                    </div>
+                </div>
+            </div>
+
+            <div id="dashboard" class="tab-content">
+                <h2>Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Habits Completed Today</h3>
+                        <p id="stats-completed">0 / 0</p>
+                    </div>
+                     <div class="stat-card">
+                        <h3>A Random Quote</h3>
+                        <p id="quote-text"></p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Habit Insights</h3>
+                        <div class="insight-item">
+                            <span>💪 Your Strongest Habit</span>
+                            <p id="insight-strongest">...</p>
+                        </div>
+                        <div class="insight-item">
+                            <span>🎯 Habit to Focus On</span>
+                            <p id="insight-focus">...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="my-habits" class="tab-content">
+                <h2>My Habits</h2>
+                <div class="my-habits-container">
+                    <form id="add-habit-form">
+                        <input type="text" id="habit-input" placeholder="Add a new habit...">
+                        <button type="submit">Add Habit</button>
+                    </form>
+                    <ul id="habit-list"></ul>
+                </div>
+            </div>
+
+            <div id="calendar" class="tab-content">
+                <h2>Monthly Review</h2>
+                <div class="calendar-header">
+                    <button id="prev-month-btn-calendar">&lt;</button>
+                    <h3 id="month-year-header"></h3>
+                    <button id="next-month-btn-calendar">&gt;</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="day-name">Sun</div>
+                    <div class="day-name">Mon</div>
+                    <div class="day-name">Tue</div>
+                    <div class="day-name">Wed</div>
+                    <div class="day-name">Thu</div>
+                    <div class="day-name">Fri</div>
+                    <div class="day-name">Sat</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
